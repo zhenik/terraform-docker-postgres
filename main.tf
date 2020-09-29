@@ -15,7 +15,7 @@ module "containers" {
     module.volumes,
     module.networks
   ]
-  minio_container_networks = [{
+  pg_container_networks = [{
       name = var.network_name
   }]
   pg_container_image = var.container_image
@@ -26,5 +26,5 @@ module "containers" {
   pg_user = var.user
   pg_container_environment_variables = var.environment_variables
   pg_container_restart_policy = var.container_restart_policy
-  pg_container_networks = [var.network_name]
+
 }
